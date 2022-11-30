@@ -20,7 +20,7 @@ const Listing = (props) => {
                         </a>
                     </div>
                     <div className="item-details">
-                        <p className="item-title">{elem.title}</p>
+                        <p className="item-title">{( elem.title && elem.title.slice(0, 51) < elem.title && `${elem.title.slice(0, 51)}...` )}</p>
                         <p className="item-price">{(elem.currency_code === "GBP" && (`${elem.price} ${elem.currency_code}`)) || 
                         (elem.currency_code === "EUR" && `${elem.price} €`) || 
                         (elem.currency_code === "USD" && `${elem.price} $`)}</p>
