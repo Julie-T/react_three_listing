@@ -38,6 +38,8 @@ Listing.defaultProps = {
     items: []
 }
 
-Listing.propTypes = {}
+Listing.propTypes = {
+    items: PropTypes.object.isRequired,
+}
 
 export default Listing
